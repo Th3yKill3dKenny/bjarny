@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode Button</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #000;
+        transition: all 0.5s ease;
+      }
+      .button {
+        background-color: #fff;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        margin: 50px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .button:hover {
+        background-color: #000;
+        color: #fff;
+      }
+      .dark-mode {
+        background-color: #000;
+        color: #000;
+      }
+      .dark-mode .button {
+        background-color: #fff;
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <p1>Nando is gay</p1>
+    <h1></h1>
+    <button class="button" onclick="toggleDarkMode()">Dark Mode</button>
+    <script>
+      function toggleDarkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+        var button = document.getElementsByClassName('button')[0];
+        if(element.classList.contains("dark-mode")){
+          button.innerHTML = "Light Mode";
+        } else {
+          button.innerHTML = "Dark Mode";
+        }
+      }
+    </script>
+  </body>
+</html>
